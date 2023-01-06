@@ -5,7 +5,7 @@ if not ok then
     return
 end
 
-local options = {
+telescope.setup {
     defaults = {
         vimgrep_arguments = {
             "rg",
@@ -68,28 +68,28 @@ local options = {
                 },
             }
         },
-    },
-    extensions_list = {
+        project = {
+            hidden_files = true, -- default: false
+            theme = "dropdown",
+            order_by = "asc",
+            search_by = "title",
+            sync_with_nvim_tree = true, -- default false
+        },
         packer = {
+            theme = "dropdown",
             layout_config = {
                 height = .5
-            },
-            theme = "ivy",
-        },
-        project = {
-            theme = "ivy",
-            hidden_files = true,
+            }
         },
         file_browser = {
+            theme = "dropdown",
+            -- disables netrw and use telescope-file-browser in its place
             hijack_netrw = true,
-            theme = "ivy",
-        },
+        }
     },
 }
 
-telescope.setup(options)
-
-for name, _ in pairs(options.extensions_list) do
-    telescope.load_extension(name)
-end
 require("telescope").load_extension("ui-select")
+require("telescope").load_extension("project")
+require("telescope").load_extension("packer")
+require("telescope").load_extension("file_browser")

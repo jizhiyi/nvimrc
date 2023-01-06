@@ -107,17 +107,23 @@ local leader_mappings = {
         p = { "<cmd>cd %:p:h<CR> ", "Change pwd to current file" }
     },
 
+    C = {
+        name = "competition",
+        R = { "<cmd>CompetiTestReceive<CR>", "Test Receive" },
+        r = { "<cmd>CompetiTestRun<CR>", "Test Run" },
+    },
+
     d = {
         name = "Debug",
-        t = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
-        b = { "<cmd>lua require'dap'.step_back()<CR>", "Step Back" },
+        b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
         c = { "<cmd>lua require'dap'.continue()<CR>", "Continue" },
+        i = { "<cmd>lua require'dap'.step_into()<CR>", "Step Into" },
+        n = { "<cmd>lua require'dap'.step_over()<CR>", "Step Over" },
+        o = { "<cmd>lua require'dap'.step_out()<CR>", "Step Out" },
+        -- b = { "<cmd>lua require'dap'.step_back()<CR>", "Step Back" },
         C = { "<cmd>lua require'dap'.run_to_cursor()<CR>", "Run To Cursor" },
         d = { "<cmd>lua require'dap'.disconnect()<CR>", "Disconnect" },
         g = { "<cmd>lua require'dap'.session()<CR>", "Get Session" },
-        i = { "<cmd>lua require'dap'.step_into()<CR>", "Step Into" },
-        o = { "<cmd>lua require'dap'.step_over()<CR>", "Step Over" },
-        u = { "<cmd>lua require'dap'.step_out()<CR>", "Step Out" },
         p = { "<cmd>lua require'dap'.pause.toggle()<CR>", "Pause" },
         r = { "<cmd>lua require'dap'.repl.toggle()<CR>", "Toggle Repl" },
         s = { "<cmd>lua require'dap'.continue()<CR>", "Start" },
@@ -222,6 +228,18 @@ local leader_mappings = {
         p = { "<cmd>RunProject<CR>", "Run Project" },
         c = { "<cmd>RunClose<CR>", "Close" }
     },
+
+    t = {
+        name = "Terminal",
+        n = { "<cmd>lua _NODE_TOGGLE()<CR>", "Node" },
+        u = { "<cmd>lua _NCDU_TOGGLE()<CR>", "NCDU" },
+        t = { "<cmd>lua _HTOP_TOGGLE()<CR>", "Htop" },
+        p = { "<cmd>lua _PYTHON_TOGGLE()<CR>", "Python" },
+        f = { "<cmd>ToggleTerm direction=float<CR>", "Float" },
+        h = { "<cmd>ToggleTerm size=10 direction=horizontal<CR>", "Horizontal" },
+        v = { "<cmd>ToggleTerm size=80 direction=vertical<CR>", "Vertical" },
+    },
+
     T = {
         name = "Todo",
         t = { "<cmd>TodoTelescope<CR>", "Show todos" },

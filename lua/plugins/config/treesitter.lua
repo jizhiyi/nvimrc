@@ -3,7 +3,7 @@ if not status_ok then
     return
 end
 
-local options = {
+treesitter.setup {
     -- A list of parser names, or "all"
     ensure_installed = "all",
     sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
@@ -38,11 +38,9 @@ local options = {
 }
 
 -- 开启 Folding 模块
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevel = 99
-
-treesitter.setup(options)
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldlevel = 99
 
 -- 其他扩展模块
 -- https://hub.fastgit.xyz/nvim-treesitter/nvim-treesitter/wiki/Extra-modules-and-plugins
