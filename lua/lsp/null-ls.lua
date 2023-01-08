@@ -43,7 +43,7 @@ null_ls.setup({
     debug = false,
     sources = {
         -- c/c++
-        formatting.clang_format,
+        formatting.clang_format.with({ extra_args = { "--style=\"{IndentWidth: 4}\"", "--sort-includes" } }),
         -- cmake
         formatting.gersemi,
         -- go

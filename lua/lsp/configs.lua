@@ -14,6 +14,16 @@ lspconfig.sumneko_lua.setup({
     settings = require("lsp.config.sumneko_lua").settings,
 })
 
+lspconfig.clangd.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    cmd = {
+        "clangd",
+        "--limit-references=0",
+        "--background-index",
+    }
+})
+
 for _, server in ipairs(lsp_servers.regular_servers) do
     lspconfig[server].setup({
         on_attach = on_attach,

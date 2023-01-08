@@ -9,7 +9,6 @@ M.all_servers = {
 }
 
 M.regular_servers = {
-    "clangd",
     "cmake",
     "gopls",
 }
