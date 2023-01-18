@@ -6,11 +6,13 @@ M.all_servers = {
     "clangd",
     "cmake",
     "gopls",
+    "pyright",
 }
 
 M.regular_servers = {
     "cmake",
     "gopls",
+    "pyright",
 }
 
 return M

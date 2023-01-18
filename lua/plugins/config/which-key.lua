@@ -115,20 +115,27 @@ local leader_mappings = {
 
     d = {
         name = "Debug",
-        b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
         c = { "<cmd>lua require'dap'.continue()<CR>", "Continue" },
-        i = { "<cmd>lua require'dap'.step_into()<CR>", "Step Into" },
+        b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
+        T = { "<cmd> require('dap').clear_breakpoints()<CR>", "Clear Breakpoint" },
         n = { "<cmd>lua require'dap'.step_over()<CR>", "Step Over" },
+        i = { "<cmd>lua require'dap'.step_into()<CR>", "Step Into" },
         o = { "<cmd>lua require'dap'.step_out()<CR>", "Step Out" },
-        -- b = { "<cmd>lua require'dap'.step_back()<CR>", "Step Back" },
-        C = { "<cmd>lua require'dap'.run_to_cursor()<CR>", "Run To Cursor" },
-        d = { "<cmd>lua require'dap'.disconnect()<CR>", "Disconnect" },
-        g = { "<cmd>lua require'dap'.session()<CR>", "Get Session" },
-        p = { "<cmd>lua require'dap'.pause.toggle()<CR>", "Pause" },
+        e = { "<cmd>lua require'dap'.close()<CR>"
+            .. "<cmd>lua require'dap'.terminate()<CR>"
+            .. "<cmd>lua require'dap.repl'.close()<CR>"
+            .. "<cmd>lua require'dapui'.close()<CR>"
+            .. "<cmd>lua require('dap').clear_breakpoints()<CR>"
+            .. "<C-w>o<CR>", "Dap Close" },
+        h = { "<cmd>lua require'dapui'.eval()<CR>", "Dap Eval" },
         r = { "<cmd>lua require'dap'.repl.toggle()<CR>", "Toggle Repl" },
-        s = { "<cmd>lua require'dap'.continue()<CR>", "Start" },
-        q = { "<cmd>lua require'dap'.close()<CR>", "Quit" },
-        l = { "<cmd>lua require'osv'.run_this()<CR>", "Debug Lua" },
+
+        -- b = { "<cmd>lua require'dap'.step_back()<CR>", "Step Back" },
+        -- C = { "<cmd>lua require'dap'.run_to_cursor()<CR>", "Run To Cursor" },
+        -- d = { "<cmd>lua require'dap'.disconnect()<CR>", "Disconnect" },
+        -- g = { "<cmd>lua require'dap'.session()<CR>", "Get Session" },
+        -- p = { "<cmd>lua require'dap'.pause.toggle()<CR>", "Pause" },
+        -- l = { "<cmd>lua require'osv'.run_this()<CR>", "Debug Lua" },
     },
 
     f = {
