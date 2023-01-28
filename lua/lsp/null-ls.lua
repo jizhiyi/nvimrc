@@ -39,17 +39,21 @@ local async_formatting = function(bufnr)
 end
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+
+local nvim_config_dir = vim.fn.stdpath("config")
+
 null_ls.setup({
     debug = false,
     sources = {
         -- c/c++
-        formatting.clang_format.with({ extra_args = { "--style=\"{IndentWidth: 4}\"", "--sort-includes" } }),
+        formatting.clang_format.with({ extra_args = { "-style=file:" .. nvim_config_dir .. "/.clang-format" } }),
         -- cmake
         formatting.gersemi,
         -- go
         formatting.gofumpt, -- 格式化
         formatting.goimports_reviser, -- 自动添加,删除 import
         formatting.goimports, -- 排序 import
+        code_actions.gomodifytags, -- 添加标签
         -- json
         formatting.jq,
         -- lua

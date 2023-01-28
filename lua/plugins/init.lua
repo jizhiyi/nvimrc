@@ -140,6 +140,7 @@ packer.startup(function(use)
         requires = "MunifTanjim/nui.nvim",
         config = function() require "competitest".setup() end
     }
+    use("yianwillis/vimcdoc")
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
