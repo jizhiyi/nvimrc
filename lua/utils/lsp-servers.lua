@@ -7,6 +7,7 @@ M.all_servers = {
     "cmake",
     "gopls",
     "pyright",
+    "rust_analyzer",
 }
 
 M.regular_servers = {

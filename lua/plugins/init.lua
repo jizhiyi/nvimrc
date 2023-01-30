@@ -74,6 +74,9 @@ packer.startup(function(use)
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
     use("neovim/nvim-lspconfig")
+    use { "simrat39/rust-tools.nvim", config = function()
+        require("rust-tools").setup {}
+    end }
 
     -- 代码格式化
     use("jose-elias-alvarez/null-ls.nvim")

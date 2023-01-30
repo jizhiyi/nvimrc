@@ -129,13 +129,13 @@ local leader_mappings = {
             .. "<C-w>o<CR>", "Dap Close" },
         h = { "<cmd>lua require'dapui'.eval()<CR>", "Dap Eval" },
         r = { "<cmd>lua require'dap'.repl.toggle()<CR>", "Toggle Repl" },
+        l = { "<cmd>lua require'osv'.run_this()<CR>", "Debug Lua" },
 
         -- b = { "<cmd>lua require'dap'.step_back()<CR>", "Step Back" },
         -- C = { "<cmd>lua require'dap'.run_to_cursor()<CR>", "Run To Cursor" },
         -- d = { "<cmd>lua require'dap'.disconnect()<CR>", "Disconnect" },
         -- g = { "<cmd>lua require'dap'.session()<CR>", "Get Session" },
         -- p = { "<cmd>lua require'dap'.pause.toggle()<CR>", "Pause" },
-        -- l = { "<cmd>lua require'osv'.run_this()<CR>", "Debug Lua" },
     },
 
     f = {

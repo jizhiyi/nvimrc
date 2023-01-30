@@ -75,7 +75,9 @@ end
 
 require("daps.adapter.lldb")
 require("daps.adapter.delve")
+require("daps.adapter.nlua")
 
 require("daps.config.c")
 require("daps.config.cpp")
 require("daps.config.go")
+require("daps.config.lua")
