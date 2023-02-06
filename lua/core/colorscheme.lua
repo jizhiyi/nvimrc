@@ -1,5 +1,5 @@
-vim.o.background = "light"
-local colorscheme = "base16-one-light"
+vim.o.background = "dark"
+local colorscheme = "base16-onedark"
 
 -- base16-monokai
 -- base16-pico

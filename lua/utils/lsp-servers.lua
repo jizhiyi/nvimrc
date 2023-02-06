@@ -8,12 +8,14 @@ M.all_servers = {
     "gopls",
     "pyright",
     "rust_analyzer",
+    "tsserver",
 }
 
 M.regular_servers = {
     "cmake",
     "gopls",
     "pyright",
+    "tsserver",
 }
 
 return M

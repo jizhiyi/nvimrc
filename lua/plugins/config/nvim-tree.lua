@@ -43,7 +43,7 @@ nvim_tree.setup({
     },
     filters = {
         dotfiles = false,
-        custom = {},
+        custom = { "*.meta" },
     },
     git = {
         enable = true,
