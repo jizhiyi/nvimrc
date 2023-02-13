@@ -8,10 +8,10 @@ local lsp_servers = require("utils.lsp-servers")
 local on_attach = require("lsp.handlers").on_attach
 local capabilities = require("lsp.handlers").capabilities
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    settings = require("lsp.config.sumneko_lua").settings,
+    settings = require("lsp.config.lua_ls").settings,
 })
 
 lspconfig.clangd.setup({
