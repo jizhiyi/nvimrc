@@ -63,6 +63,7 @@ packer.startup(function(use)
     use("moll/vim-bbye")
     -- 状态栏
     use("nvim-lualine/lualine.nvim")
+    use("arkav/lualine-lsp-progress")
     -- 提示线
     use("lukas-reineke/indent-blankline.nvim")
     -- 代码高亮增强
