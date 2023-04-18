@@ -6,12 +6,30 @@ if not status_ok then
     return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+local config_status_ok = pcall(require, "nvim-tree.config")
 if not config_status_ok then
     return
 end
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+local function my_on_attach(bufnr)
+    local api = require("nvim-tree.api")
+
+    local function opts(desc)
+        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+    -- mappings = {
+    --     custom_only = false,
+    --     list = {
+    --         { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
+    --         { key = "h",                  cb = tree_cb("close_node") },
+    --         { key = "v",                  cb = tree_cb("vsplit") },
+    --     },
+    -- },
+
+    vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
+    vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
+    vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Dir"))
+end
 
 vim.cmd([[
 ]])
@@ -32,6 +50,7 @@ nvim_tree.setup({
             error = "",
         },
     },
+    on_attach = my_on_attach,
     update_focused_file = {
         enable = true,
         update_cwd = false,
@@ -54,14 +73,6 @@ nvim_tree.setup({
         width = 30,
         hide_root_folder = false,
         side = "left",
-        mappings = {
-            custom_only = false,
-            list = {
-                { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-                { key = "h",                  cb = tree_cb("close_node") },
-                { key = "v",                  cb = tree_cb("vsplit") },
-            },
-        },
         number = false,
         relativenumber = false,
         signcolumn = "yes",
