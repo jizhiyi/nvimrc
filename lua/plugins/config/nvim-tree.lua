@@ -17,14 +17,8 @@ local function my_on_attach(bufnr)
     local function opts(desc)
         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
-    -- mappings = {
-    --     custom_only = false,
-    --     list = {
-    --         { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-    --         { key = "h",                  cb = tree_cb("close_node") },
-    --         { key = "v",                  cb = tree_cb("vsplit") },
-    --     },
-    -- },
+
+    api.config.mappings.default_on_attach(bufnr)
 
     vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
     vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
