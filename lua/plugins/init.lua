@@ -151,6 +151,9 @@ packer.startup(function(use)
         "karb94/neoscroll.nvim",
         config = function() require("neoscroll").setup() end
     }
+    -- waketime
+    use "wakatime/vim-wakatime"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
