@@ -8,6 +8,11 @@ local lsp_servers = require("utils.lsp-servers")
 local on_attach = require("lsp.handlers").on_attach
 local capabilities = require("lsp.handlers").capabilities
 
+local neodev_ok, neodev = pcall(require, "neodev")
+if neodev_ok then
+    neodev.setup()
+end
+
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,

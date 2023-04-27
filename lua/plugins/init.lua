@@ -78,6 +78,7 @@ packer.startup(function(use)
     use { "simrat39/rust-tools.nvim", config = function()
         require("rust-tools").setup {}
     end }
+    use("folke/neodev.nvim")
 
     -- 代码格式化
     use("jose-elias-alvarez/null-ls.nvim")
@@ -87,14 +88,14 @@ packer.startup(function(use)
     use({ "https://git.sr.ht/~whynothugo/lsp_lines.nvim" })
 
     -- cmp plugins
-    use("hrsh7th/nvim-cmp") -- The completion plugin
-    use("hrsh7th/cmp-buffer") -- buffer completions
-    use("hrsh7th/cmp-path") -- path completions
-    use("hrsh7th/cmp-cmdline") -- cmdline completions
+    use("hrsh7th/nvim-cmp")         -- The completion plugin
+    use("hrsh7th/cmp-buffer")       -- buffer completions
+    use("hrsh7th/cmp-path")         -- path completions
+    use("hrsh7th/cmp-cmdline")      -- cmdline completions
     use("saadparwaiz1/cmp_luasnip") -- snippet completions
     use("hrsh7th/cmp-nvim-lsp")
     -- snippets
-    use("L3MON4D3/LuaSnip") --snippet engine
+    use("L3MON4D3/LuaSnip")             --snippet engine
     use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
     -- Telescope

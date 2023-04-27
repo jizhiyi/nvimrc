@@ -9,8 +9,8 @@ return {
             },
             workspace = {
                 library = {
-                    vim.fn.expand("$VIMRUNTIME/lua"),
-                    vim.fn.stdpath("config") .. "/lua",
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.stdpath("config") .. "/lua"] = true,
                 },
             },
             format = {
@@ -22,6 +22,9 @@ return {
                     quote_style = "double",
                     max_line_length = "unset"
                 },
+            },
+            completion = {
+                callSnippet = "Replace"
             },
             locale = "zh-cn",
         },
