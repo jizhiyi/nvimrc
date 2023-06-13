@@ -41,7 +41,7 @@ null_ls.setup({
         formatting.prettier.with({ extra_args = { "--tab-width", "4" } }),
 
         formatting.autopep8,
-        diagnostics.flake8,
+        diagnostics.flake8.with({extra_args = {"--ignore=E501"}}),
 
         diagnostics.jsonlint,
         code_actions.gitsigns,
