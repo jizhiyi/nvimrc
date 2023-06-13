@@ -6,7 +6,7 @@ M.all_servers = {
     "clangd",
     "cmake",
     "gopls",
-    "pyright",
+    "jedi_language_server",
     "rust_analyzer",
     "tsserver",
 }
@@ -14,7 +14,7 @@ M.all_servers = {
 M.regular_servers = {
     "cmake",
     "gopls",
-    "pyright",
+    "jedi_language_server",
     "tsserver",
 }
 

@@ -29,10 +29,10 @@ null_ls.setup({
         -- cmake
         formatting.gersemi,
         -- go
-        formatting.gofumpt, -- 格式化
+        formatting.gofumpt,           -- 格式化
         formatting.goimports_reviser, -- 自动添加,删除 import
-        formatting.goimports, -- 排序 import
-        code_actions.gomodifytags, -- 添加标签
+        formatting.goimports,         -- 排序 import
+        code_actions.gomodifytags,    -- 添加标签
         -- json
         formatting.jq,
         -- lua
@@ -40,7 +40,7 @@ null_ls.setup({
         -- js
         formatting.prettier.with({ extra_args = { "--tab-width", "4" } }),
 
-        formatting.black.with({ extra_args = { "--fast" } }),
+        formatting.autopep8,
         diagnostics.flake8,
 
         diagnostics.jsonlint,
