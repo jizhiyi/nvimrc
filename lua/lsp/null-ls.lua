@@ -41,12 +41,10 @@ null_ls.setup({
         formatting.prettier.with({ extra_args = { "--tab-width", "4" } }),
 
         formatting.autopep8,
-        diagnostics.flake8.with({extra_args = {"--ignore=E501"}}),
+        diagnostics.flake8.with({ extra_args = { "--ignore=E501" } }),
 
         diagnostics.jsonlint,
         code_actions.gitsigns,
-        formatting.latexindent,
-        diagnostics.chktex,
     },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
