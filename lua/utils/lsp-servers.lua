@@ -9,6 +9,7 @@ M.all_servers = {
     "pyright",
     "rust_analyzer",
     "tsserver",
+    "cssls",
 }
 
 M.regular_servers = {
@@ -16,6 +17,7 @@ M.regular_servers = {
     "gopls",
     "pyright",
     "tsserver",
+    "cssls",
 }
 
 return M
