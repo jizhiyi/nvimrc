@@ -155,6 +155,7 @@ local leader_mappings = {
         h = { "<cmd>Telescope help_tags<CR>", "Help" },
         l = { "<cmd>Telescope resume<CR>", "Last Search" },
         M = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
+        m = { "<cmd>Telescope module<CR>", "Select Module" },
         r = { "<cmd>Telescope oldfiles<CR>", "Recent File" },
         R = { "<cmd>Telescope registers<CR>", "Registers" },
         k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },
@@ -201,6 +202,7 @@ local leader_mappings = {
             "<cmd>Telescope lsp_document_diagnostics<CR>",
             "Document Diagnostics",
         },
+        D = { "<cmd>Telescope lsp_definitions<CR>", "Definitions" },
         w = {
             "<cmd>Telescope lsp_workspace_diagnostics<CR>",
             "Workspace Diagnostics",
@@ -215,7 +217,8 @@ local leader_mappings = {
             "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>",
             "Workspace Symbols",
         },
-        r = { '<cmd>lua require("renamer").rename()<CR>', "Rename" }
+        r = { '<cmd>lua require("renamer").rename()<CR>', "Rename" },
+        R = { "<cmd>Telescope lsp_references<CR>", "References" },
     },
 
     ["n"] = { "<cmd>noh<CR>", "Clear Highlight" },
