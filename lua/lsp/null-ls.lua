@@ -40,6 +40,9 @@ null_ls.setup({
         -- js
         formatting.prettier.with({ extra_args = { "--tab-width", "4" } }),
 
+        -- C#
+        formatting.csharpier,
+
         formatting.autopep8,
         diagnostics.flake8.with({ extra_args = { "--ignore=E501" } }),
 

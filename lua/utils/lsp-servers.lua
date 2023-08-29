@@ -10,6 +10,7 @@ M.all_servers = {
     "rust_analyzer",
     "tsserver",
     "cssls",
+    "omnisharp",
 }
 
 M.regular_servers = {
@@ -18,6 +19,7 @@ M.regular_servers = {
     "pyright",
     "tsserver",
     "cssls",
+    "omnisharp",
 }
 
 return M
