@@ -11,6 +11,7 @@ M.all_servers = {
     "tsserver",
     "cssls",
     "omnisharp",
+    "volar",
 }
 
 M.regular_servers = {
@@ -20,6 +21,7 @@ M.regular_servers = {
     "tsserver",
     "cssls",
     "omnisharp",
+    "volar",
 }
 
 return M

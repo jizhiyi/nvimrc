@@ -154,6 +154,11 @@ packer.startup(function(use)
     -- waketime
     use "wakatime/vim-wakatime"
 
+    -- AI
+    use {
+        "Exafunction/codeium.vim",
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
@@ -169,7 +174,7 @@ require("plugins.config.alpha")
 require("plugins.config.telescope")
 require("plugins.config.bufferline")
 require("plugins.config.lualine")
-require("plugins.config.indent-blankline")
+require("plugins.config.ibl")
 require("plugins.config.treesitter")
 require("plugins.config.renamer")
 require("plugins.config.lsp_lines")

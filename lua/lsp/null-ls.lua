@@ -38,7 +38,7 @@ null_ls.setup({
         -- lua
         formatting.stylua.with({ extra_args = { "--indent_type=Spaces" } }),
         -- js
-        formatting.prettier.with({ extra_args = { "--tab-width", "4" } }),
+        formatting.prettier,
 
         -- C#
         formatting.csharpier,
