@@ -1,5 +1,5 @@
 vim.o.background = "dark"
-local colorscheme = "base16-da-one-gray"
+local colorscheme = "base16-monokai"
 
 -- base16-monokai
 -- base16-pico

@@ -11,6 +11,7 @@ M.all_servers = {
     "tsserver",
     "cssls",
     "omnisharp",
+    "bashls",
     "volar",
 }
 
@@ -21,6 +22,7 @@ M.regular_servers = {
     "tsserver",
     "cssls",
     "omnisharp",
+    "bashls",
     "volar",
 }
 

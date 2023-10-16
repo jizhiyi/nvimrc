@@ -43,6 +43,9 @@ null_ls.setup({
         -- C#
         formatting.csharpier,
 
+        -- shell
+        formatting.beautysh,
+
         formatting.autopep8,
         diagnostics.flake8.with({ extra_args = { "--ignore=E501" } }),
 
